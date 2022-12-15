@@ -24,17 +24,29 @@ In root directory
 When error occurs..
 - pip3 install --upgrade pip
 
-## How to run locally
-1. (optional: if migration does not work properly) rm (app_name)/migrations/*.py (except \_\_init\_\_.py!!)
-2. rm db.sqlite3
-3. python -m venv your_own_venv
-4. source your_own_venv/bin/activate
-5. python pip install django==3.1.6 django_rest_framework==3.12.2
-6. python manage.py makemigrations
-7. python manage.py migrate
-8. python manage.py createsuperuser
-9. python manage.py runserver
-10. Goto https://localhost:8000/admin page.
+## How to run locally (수정중)
+0. git clone in local directory
+
+### Backend
+1. docker pull stbaker517/env_be:first
+2. docker run -it -p 8800:8800 -v <cloned_directory>:/2022fall_41class_team9 <pulled_image_ID>
+(**Use docker images to see image ID)
+3. cd 2022fall_41class_team9
+4. pip install -r requirements.txt
+5. cd backend
+6. source myvenv/bin/activate
+7. python3 manage.py makemigration
+8. python3 manage.py migrate
+9. python3 manage.py runserver 0.0.0.0:8800
+
+### Frontend
+1. docker run -it -d -p 3000:3000 --add-host host.docker.internal:host-gateway node:lts
+2. docker exec -it <running_container_ID> /bin/bash
+(**Use docker ps to see container ID)
+3. git clone
+4. cd 2022fall_41class_team9/frontend
+5. npm install
+6. npm start
 
 ## Usage
 ### SELECT with Serializers
