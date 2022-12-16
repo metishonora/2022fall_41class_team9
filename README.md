@@ -17,13 +17,6 @@ PLZ Watch the BOOK!
 - django: 3.1.6
 - django_rest_framework: 3.12.2
 
-## Install Python Library
-In root directory
-- pip3 install -r requirements.txt
-
-When error occurs..
-- pip3 install --upgrade pip
-
 ## How to run locally
 1. docker run -it -d -p 3000:3000 --name npm node:lts
 2. docker exec -it npm /bin/bash
