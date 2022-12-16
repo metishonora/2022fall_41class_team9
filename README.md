@@ -25,6 +25,7 @@ PLZ Watch the BOOK!
 5. apt update && apt install tmux pip
 
 On pane#0:
+
 6. pip install -r requirements.txt
 7. cd backend
 8. python3 manage.py makemigration
@@ -32,6 +33,7 @@ On pane#0:
 9. python3 manage.py runserver 0.0.0.0:8800
 
 On pane#1:
+
 10. cd frontend
 11. npm install
 12. npm start
