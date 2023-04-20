@@ -18,7 +18,7 @@ PLZ Watch the BOOK!
 - django_rest_framework: 3.12.2
 
 ## How to run locally
-1. docker run -it -d -p 3000:3000 --name npm node:lts
+1. docker run -it -d -p 3000:3000 --name npm node:lts     OR  docker run -it -d --network host --name npm node:lts
 2. docker exec -it npm /bin/bash
 3. git clone
 4. cd 2022fall_41class_team9
@@ -30,7 +30,7 @@ PLZ Watch the BOOK!
 8. python3 manage.py migrate
 9. python3 manage.py runserver 0.0.0.0:8800 &
 
-10. cd frontend
+10. cd ../frontend
 11. npm install
 12. npm start
 
