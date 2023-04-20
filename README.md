@@ -22,17 +22,13 @@ PLZ Watch the BOOK!
 2. docker exec -it npm /bin/bash
 3. git clone
 4. cd 2022fall_41class_team9
-5. apt update && apt install tmux pip
-
-On pane#0:
+5. apt update && apt install pip
 
 6. pip install -r requirements.txt
 7. cd backend
 8. python3 manage.py makemigration
 8. python3 manage.py migrate
-9. python3 manage.py runserver 0.0.0.0:8800
-
-On pane#1:
+9. python3 manage.py runserver 0.0.0.0:8800 &
 
 10. cd frontend
 11. npm install
