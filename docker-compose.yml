@@ -1,0 +1,13 @@
+version: '3'
+services:
+  front:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    network_mode: "host"
+
+  backend:
+    build: .
+    ports:
+      - "8800:8800"
+    network_mode: "host"
