@@ -2,7 +2,7 @@ FROM node:lts
 COPY . .
 RUN apt update -y
 RUN apt install pip -y
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt --break-system-packages
 WORKDIR backend
 RUN python3 manage.py makemigrations
 RUN python3 manage.py migrate
